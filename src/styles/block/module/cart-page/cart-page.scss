@@ -1,0 +1,201 @@
+.cart-page {
+  flex-grow: 1;
+}
+
+.cart-page__list {
+  @include col;
+  @include size(9);
+  @include size-xs(12);
+  @include display(column);
+  border: 2px solid #f2f2f2;
+  border-bottom: none;
+  margin-bottom: $marginSection;
+  padding-left: 0;
+  &-item {
+    @include display(row,flex-start,center);
+    @include xs-block {
+      flex-wrap: wrap;
+      padding: $paddingBlock;
+    }
+    border-bottom: 2px solid #f2f2f2;
+  }
+}
+
+.pull-right {
+  float: left;
+}
+
+.pull-left {
+  margin-right: $marginBlock;
+}
+
+.default-cart__buttons {
+  margin-bottom: $marginBlock;
+}
+
+
+.cart-page {
+
+  &__preview {
+    flex-basis: 100px;
+    padding: $paddingBlock;
+    @include xs-block {
+      flex-basis: 100%;
+      text-align: center;
+    }
+    & img {
+      //max-width: 100px;
+      max-height: 90px;
+    }
+  }
+  &__description {
+    @include display(column);
+    flex-grow: 1;
+    margin-right: $marginSection;
+    @include xs-block {
+      flex-basis: 100%;
+      order: -1;
+      text-align: center;
+      margin-top: $marginBlock;
+      margin-right: 0;
+    }
+    &-name {
+      @include font();
+      font-size: 18px;
+      color: $colorFontB;
+    }
+    &-art {
+      font-size: 16px;
+    }
+  }
+  &__price {
+    @include xs-block {
+      flex-grow: 1;
+      &--total {
+        text-align: right;
+      }
+    }
+  }
+  &__count {
+    padding: $paddingBlock/2;
+    max-width: 180px;
+    margin: 0 $marginSection;
+    box-sizing: border-box;
+    @include xs-block {
+      margin: 0;
+    }
+    &-label {
+      display: block;
+      @include display(row);
+    }
+    &-input {
+      display: inline-block;
+      max-width: 30px;
+      min-width: auto;
+      box-sizing: border-box;
+      border: 0;
+      padding: $paddingBlock/2;
+      text-align: center;
+      @include xs-block {
+        max-width: 50px;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  &__button {
+    background-color: transparent;
+    & .icon {
+      fill: $colorAcent;
+    }
+    padding: $paddingBlock/2;
+    cursor: pointer;
+  }
+  &__option {
+    margin-top: $marginBlock;
+    font-size: 16px;
+  }
+}
+
+.cart-page__total {
+  @include col;
+  @include size(9);
+  @include size-xs(12);
+  @include display(row,flex-end,center);
+  margin-bottom: $marginSection;
+  @include xs-block {
+    justify-content: space-between;
+  }
+}
+
+.cart-page__links {
+  @include col;
+  @include size(9);
+  @include size-xs(12);
+  @include display(row,space-between,center);
+  margin-bottom: $marginSection;
+}
+
+.cart-page__link {
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: $colorAcent;
+  color: $colorFontW;
+  padding: $paddingBlock;
+  min-width: 170px;
+  text-align: center;
+  &:hover {
+    background-color: lighten($colorAcent,20%);
+  }
+}
+
+.cart-page__head {
+  @include col;
+  @include size(9);
+  @include size-xs(12);
+  text-align: left;
+}
+
+
+.product-page__buttons--cart {
+  @include xs-block {
+    margin: 0;
+  }
+}
+.cart-page__notice {
+  @include col;
+  @include size(9);
+  margin-bottom: $marginSection;
+  &-block {
+
+  }
+  &-text {
+    margin-left: $marginBlock;
+  }
+}
+.cart-page__notice-item {
+  @include display(row,flex-start,center);
+  margin-bottom: $marginBlock;
+}
+
+.cart-page__button-close {
+  cursor: pointer;
+  background: none;
+}
+
+.cart-page__item-price {
+  @include font("b");
+  font-size: 26px;
+}
+
+.cart-page__total-price {
+  @include font("b");
+  font-size: 26px;
+}
+
+.cart-page__total-name {
+  @include font;
+  margin-right: $marginBlock;
+}

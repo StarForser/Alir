@@ -1,0 +1,28 @@
+header.header
+  .header__top
+    .grid-wrapper
+      .grid-row
+        .header__top-wrap
+          a.header__top-link.header__top-link--stretch(href="")
+            +svg("icon-contact", "phone")
+            span.header__top-link-text +7 (8332) 65-38-11
+          a.header__top-link(href="")
+            +svg("icon-contact", "mail")
+            span.header__top-link-text alir.koctum@mail.ru
+          button.header__top-btn.jsCallbtn
+            span.header__top-btn-text Связаться с нами
+  .headder__midlle
+    .grid-wrapper
+      .grid-row
+        a.logo(href="")
+          +svg("icon-logo", "logo")
+          span.logo__text Производство <br> Женской <br> Одежды
+        include bloks/search-block.pug
+        .header__wrap
+          a(href="").header__link Авторизация
+          a(href="").header__link Регистрация
+        include bloks/cart.pug
+  include bloks/navigation.pug
+        
+    
+    

@@ -1,0 +1,22 @@
+-
+  var menu = {
+    "Весна": ["Платья","Платья","Платья","Платья","Платья","Платья"],
+    "Лето": ["Блузки","Платья","Платья","Платья","Платья","Платья"],
+    "Нарядная коллекция": ["Платья","Платья","Платья","Платья","Платья","Платья"],
+    "Новинки": ["Платья","Платья","Платья","Платья","Платья","Платья"],
+    "Осень - Зима": "",
+    "Акции": ["Платья","Платья","Платья","Платья","Платья","Платья"]
+  }
+.grid-wrapper
+  .grid-row
+    +hamburger("spring")
+    nav.header__menu
+      ul.header__menu-block.jsMobileMenu
+        each val, ind in menu
+          li.header__menu-item
+            a(href="").header__menu-link=ind
+            if val
+              ul.header__menu-innerblock
+                each name in val
+                  li.header__menu-inneritem
+                    a(href="").header__menu-innerlink=name

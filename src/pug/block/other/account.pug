@@ -1,0 +1,65 @@
+section.client
+  .grid-wrapper
+    .grid-row
+      h2.client__head Личный кабинет
+      section.client__wrap
+        .client__form-alert.client__form-alert--padding 
+          span.client__form-alert-text Вы должны прочитать и согласится с Политика конфиденциальности!
+          +svg("icon-alert","alert")
+        form.client__form
+          .client__form-wrap
+            h3.client__form-head 
+              span.client__form-step 1
+              span.client__form-header Основные данные
+            label.client__form-label(for="")
+              span.client__form-name Имя 
+                  sup *
+              input.client__form-input(type="text")
+            label.client__form-label(for="")
+              span.client__form-name Фамилия 
+                  sup *
+              input.client__form-input(type="text")
+            label.client__form-label(for="")
+              span.client__form-name Телефон 
+                  sup *
+              input.client__form-input(type="text")
+            label.client__form-label(for="")
+              span.client__form-name Электронная почта 
+                  sup *
+              input.client__form-input(type="text")
+          .client__form-wrap
+            h3.client__form-head 
+              span.client__form-step.client__form-step--green 2
+              span.client__form-header Ваш пароль
+            label.client__form-label(for="")
+              span.client__form-name Пароль 
+                  sup *
+              input.client__form-input(type="text")
+              .client__form-alert 
+                span.client__form-alert-text В пароле должно быть от 4 до 20 символов
+                +svg("icon-alert","alert")
+            label.client__form-label(for="")
+              span.client__form-name Повтор пароля 
+                  sup *
+              input.client__form-input(type="text")
+          .client__form-wrap
+            h3.client__form-head 
+              span.client__form-step.client__form-step--violet 3
+              span.client__form-header Подписка на новости
+            label.custom-radio.client__form-label
+              input(type="radio" name="radio").custom-radio__input
+              span.custom-radio__element
+                +svg("icon-radio","radio")
+              span.custom-radio__label Да 
+            label.custom-radio.client__form-label
+              input(type="radio" name="radio").custom-radio__input
+              span.custom-radio__element
+                +svg("icon-radio","radio")
+              span.custom-radio__label Нет
+          .client__form-wrap.client__form-wrap--center
+            div.client__form-link Я прочитал <a href="">Политика конфиденциальности</a> и согласен с условиями безопасности и обработки персональных данных
+            label.custom-checkbox.client__form--checkbox
+              input(type="checkbox" name="agree").custom-checkbox__input
+              span.custom-checkbox__element
+                +svg("icon-checkbox","check")           
+            input(type="submit" value="Продолжить" class="button")

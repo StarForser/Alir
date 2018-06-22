@@ -1,0 +1,23 @@
+section.features
+  .grid-wrapper
+    .grid-row
+      .features__item
+        .features__item-wrap.features__item-wrap--border
+          h3.features__item-head Подарок
+          .features__item-descr 
+            span.features__item-text 500
+            +svg("icon-bruble","ruble")
+        .features__item-wrap.features__item-wrap--grow
+          .features__item-descr.features__item-descr--row
+            p.features__item-fulltext При регистрации на сайте
+            +svg("icon-features","gift")
+      .features__item.features__item--reverse
+        .features__item-wrap.features__item-wrap--border
+          h3.features__item-head Скидка
+          .features__item-descr 
+            span.features__item-text 25
+            +svg("icon-bruble","percent")
+        .features__item-wrap.features__item-wrap--grow
+          .features__item-descr.features__item-descr--row
+            p.features__item-fulltext При заказе на сумму от 5000 рублей
+            +svg("icon-features","sale")

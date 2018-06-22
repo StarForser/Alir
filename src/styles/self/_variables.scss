@@ -1,0 +1,32 @@
+@function rem($px) {
+	@return $px / 18px + 0rem;
+}
+
+
+$ffNormal: 'Open Sans Condensed', sans-serif;
+$fwNormal:  300;
+
+$ffLight: 'Open Sans Condensed', sans-serif;
+$fwLight:  300;
+
+$ffBold: 'Open Sans Condensed', sans-serif;
+$fwBold:  700;
+
+$paddingBlock: rem(10px);
+$marginBlock: rem(10px);
+$marginSection: rem(30px);
+$paddingSection: rem(30px);
+
+$colorFontB: rgba(#333333,1);
+$colorFontW: rgba(#fff,1);
+
+
+$colorGray: rgba(#333333,1);
+$colorBg: rgba(#3232f1,1);
+$colorItem: #e06822;
+$colorWhite: rgba(#fff,1);
+$colorHover: #e06822;
+
+
+$colorAcent: #FF5253;
+$colorDop: #f2f2f2;

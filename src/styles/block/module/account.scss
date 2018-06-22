@@ -1,0 +1,150 @@
+.client {
+  flex-grow: 1;
+  margin-bottom: $marginSection;
+  padding-top: $paddingSection;
+  &__head {
+    @include col;
+    @include size(12);
+  }
+  &__wrap {
+    @include col;
+    @include size(12);
+    background-color: $colorDop;
+    &--bg {
+      background-color: transparent;
+    }
+  }
+  &__form {
+
+  }
+}
+
+.client__form {
+  padding: $paddingSection;
+  
+  &-head {
+    flex-basis: 100%;
+    margin: 0;
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: $marginSection;
+    @include oneLinear(#c3c3c3, 1px);
+    &--account {
+      margin-bottom: $marginBlock;
+      padding-left: $paddingBlock*2;
+    }
+  }
+  &-step {
+    @include display(row,center,center);
+    display: inline-flex;
+    margin-right: $marginBlock;
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    background: #fff;
+    &--green {
+      background-color: #c3fec3;
+    }
+    &--violet {
+      background-color: lighten($colorAcent,20%);
+    }
+  }
+  &-header {
+
+  }
+  &-label {
+    flex-basis: 40%;
+    @include display(column);
+    padding-right: $paddingSection;
+    box-sizing: border-box;
+    margin-bottom: $marginSection;
+  }
+  &-label:nth-child(2n) {
+    margin-left: $marginSection*2;
+  }
+  &-input {
+    flex-grow: 1;
+    background-color: #fff;
+    padding: $paddingBlock $paddingBlock/2;
+    &:focus {
+      outline: 1px solid #ccc;
+
+    }
+  }
+  &-name {
+    @include font;
+    font-size: rem(18px);
+    margin-bottom: $marginBlock;
+  }
+}
+
+.client__form-wrap {
+  @include display(row,flex-start,flex-start);
+  flex-wrap: wrap;
+  &--center {
+    align-items: center;
+  }
+}
+
+.client__form-alert {
+  @include display(row,$aitems:center);
+  padding: $paddingBlock/2 0;
+  &-text {
+    @include font;
+    font-size: 18px;
+    margin-right: $marginBlock;
+  }
+  &--padding {
+    margin-top: $marginBlock;
+    padding-left: $paddingSection;
+  }
+
+}
+
+.client__form-label--radio {
+  display: inline-flex;
+  flex-basis: auto;
+}
+
+.client__form-link {
+  & a {
+    font-size: 16px;
+    color: #333;
+  }
+  @include font;
+  font-size: 16px;
+  margin-right: $marginSection;
+  margin-left: $marginSection*2;
+}
+
+.client__form--checkbox {
+  margin-right: $marginSection;
+}
+
+.button {
+  padding: $paddingBlock;
+  background-color: $colorAcent;
+  color: $colorFontW;
+  @include font;
+  font-size: 18px;
+  min-width: 170px;
+  border: none;
+}
+
+
+.account__list {
+  margin-bottom: $marginSection;
+  &-item {
+
+  }
+  &-link {
+    text-decoration: none;
+    color: $colorFontB;
+    &:hover {
+      color: $colorAcent;
+    }
+  }
+}

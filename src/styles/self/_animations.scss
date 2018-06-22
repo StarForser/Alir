@@ -1,0 +1,129 @@
+@keyframes visibleBlock {
+  0%  {
+    background-color: rgba(#000,0.0);
+  }
+  100% {
+    background-color: rgba(#000,0.6);
+  }
+};
+@keyframes hideBlock {
+  0%  {
+
+  }
+  100% {
+    background-color: rgba(#000,0.0);
+  }
+};
+@keyframes visibleContain {
+  0%  {
+    opacity: 0;
+    transform: translate3d(-100%,0,0)
+  }
+  70% {
+      transform: translate3d(30%,0,0)
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0%,0,0)
+  }
+};
+@keyframes visibleContainImg {
+  0%  {
+    opacity: 0;
+    transform: scale3d(0,0,0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3d(1,1,1);
+  }
+};
+@keyframes hideContain {
+  0%  {
+
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(100%,0,0);
+  }
+};
+@keyframes hideContainImg {
+  0%  {
+
+  }
+  100% {
+    opacity: 0;
+    transform: scale3d(0,0,0);
+  }
+};
+@keyframes AnimationHideImage {
+  0% {
+
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(-100%,0,0);
+  }
+}
+@keyframes AnimationVisibleImage {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%,0,0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0%,0,0);
+  }
+}
+@keyframes AnimationHideImageReverse {
+  0% {
+
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(100%,0,0);
+  }
+}
+@keyframes AnimationVisibleImageReverse {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%,0,0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0%,0,0);
+  }
+}
+@keyframes AnimationVisibleNav {
+  0% {
+    opacity: 0;
+    transform: translate3d(0,-100%,0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0,0%,0);
+  }
+}
+@keyframes AnimationHdeNav {
+  0% {
+
+  }
+  100% {
+    transform: translate3d(0,-100%,0);
+  }
+}
+
+@keyframes hideMobileMenu {
+  0% {}
+  100% {
+    transform: rotate3d(1,0,0,90deg);
+  }
+}
+
+@keyframes snowMobileMenu {
+  0% {
+    transform: rotate3d(1,0,0,90deg);
+    }
+  100% {
+    transform: rotate3d(0,0,0,90deg);
+  }
+}

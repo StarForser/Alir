@@ -1,0 +1,22 @@
+.breadcrumbs {
+  padding-top: $paddingSection;
+  &__block {
+    @include col;
+    @include size(12);
+    @include display(row);
+
+  }
+  &__item {
+
+  }
+  &__link {
+    @include font;
+    color: $colorFontB;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: $marginBlock;
+    &--active {
+      color: lighten($colorFontB,40%); 
+    }
+  }
+}

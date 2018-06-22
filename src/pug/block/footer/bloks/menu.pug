@@ -1,0 +1,9 @@
+-
+  var menu = ["Оптовым покупателям","Розничным покупателям","Контакты"]
+ 
+nav.footer__menu
+  h3.other-head Дополнительно
+  ul.footer__menu-block
+    each name in menu
+      li.footer__menu-item
+        a(href="").footer__menu-link= name

@@ -1,0 +1,8 @@
+mixin svg(className, name)
+  svg.icon(class=className)
+    use(xlink:href="images/sprite.svg#" + name)
+    
+mixin hamburger(classAnim)
+  button.hamburger(class='hamburger--'+ classAnim type='button')
+    span.hamburger-box
+      span.hamburger-inner

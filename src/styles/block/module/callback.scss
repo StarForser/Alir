@@ -1,0 +1,132 @@
+.call-box {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(#000,0.5);
+  z-index: 20;
+  &--active {
+    @include animation(visibleBlock,0.3s,true);
+    & .call-back {
+      @include animation(visibleContain,0.5s,false);
+    }
+  }
+  &--deactive {
+    @include animation(hideBlock,0.2s,true);
+    & .call-back {
+      @include animation(hideContain,0.2s,false);
+    }
+  }
+}
+
+.call-back {
+  @include display(column);
+  background-color: #fff;
+  padding: $paddingBlock;
+  margin: auto;
+  position: relative;
+  min-width: rem(350px);
+  @include xs-block {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  border-radius: 10px;
+  &__form {
+    @include display(column);
+  }
+  &__head {
+    color: $colorFontB;
+  }
+  &__close {
+    position: absolute;
+    right: 0;
+    background: none;
+    transform: translate3d(100%,0,0);
+    @include xs-block {
+      transform: translate3d(0,-100%,0);
+      top: 0;
+    }
+  }
+  &__form-decr {
+    @include font("b");
+    font-weight: 400;
+    
+  }
+  &__btn-submit {
+    padding: $paddingBlock;
+    background: $colorAcent;
+    color: $colorFontW;
+    border-radius: 50px;
+    box-shadow: 0px 14px 32px rgba(76, 76, 76, 0.41);
+    transition: box-shadow 0.25s;
+    &--send {
+      background-color: #48ec99;
+    }
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0px 2px 2px rgba(76, 76, 76, 0.41);
+    }
+  }
+  &--transparent {
+    display: none;
+  }
+  &--size {
+    max-width: 70%;
+    height: 100%;
+    background-color: transparent;
+  }
+  &--static {
+    border-radius: 0px;
+    margin: 0;
+    max-width: rem(200px);
+  }
+}
+
+
+.forma__label {
+  margin-bottom: $marginBlock;
+
+}
+
+.forma__input {
+  padding: $paddingBlock / 2 $paddingBlock;
+  min-width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #cbcbcb;
+  font-size: 14px;
+  &:focus {
+    outline: none;
+  }
+}
+
+.forma__label-textarea {
+
+}
+
+.forma__comment-head {
+  display: block;
+  @include font;
+  font-size: rem(14px);
+  color: $colorFontB;
+  &--row {
+    @include display;
+    margin-bottom: 10px;
+  }
+  & a {
+    color: #333;
+    font-size: 14px;
+    margin: 0 5px;
+  }
+  &--checkbox {
+    margin-left: 10px;
+  }
+}
+
+.forma__comment {
+  resize: none;
+  min-width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #cbcbcb;
+}

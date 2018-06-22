@@ -1,0 +1,29 @@
+footer.footer
+  .grid-wrapper
+    .grid-row
+      a.logo(href="").logo--footer
+        h3.other-head О НАС
+        +svg("icon-logo", "logo")
+        span.logo__text Производство Женской Одежды
+      include bloks/menu.pug
+      .footer__contacts
+        h3.other-head  Контакты
+        .footer__contacts-item
+          +svg("icon-contacts", "map")
+          span.footer__contacts-text г.Киров ул. Р. Люксембург, 23
+        a(href="").footer__contacts-item
+          +svg("icon-contacts", "phone")
+          span.footer__contacts-text +7 (8332) 65-38-11
+        a(href="").footer__contacts-item
+          +svg("icon-contacts", "phone")
+          span.footer__contacts-text +7(953) 673-44-14
+        a(href="").footer__contacts-item
+          +svg("icon-contacts", "phone")
+          span.footer__contacts-text +7(951) 347-45-45
+        a(href="").footer__contacts-item
+          +svg("icon-contacts", "mail")
+          span.footer__contacts-text alir.koctum@mail.ru
+      .footer__maps
+        h3.other-head Мы на карте
+        .footer__maps-item#map
+          

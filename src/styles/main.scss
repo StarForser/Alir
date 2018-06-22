@@ -1,0 +1,60 @@
+@import './../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
+@import '../../node_modules/normalize-scss/sass/normalize/_import-now.scss';
+@import './self/_animations.scss';
+@import './self/smart-grid.scss';
+@import './self/_variables.scss';
+@import './self/_mixin.scss';
+@import './self/_typograf.scss';
+@import './self/swiper.scss';
+
+
+/* inject:imports */
+/* endinject */
+
+
+
+
+
+html {
+  height: 100%;
+  @include xs-block {
+    font-size: 20px;
+  }
+}
+
+body {
+  @include display();
+  min-height: 100%;
+}
+
+.wrapper {
+ @include display(column);
+ flex-grow: 1;
+ min-width: 100%;
+}
+.content-wrap {
+  
+}
+.grid-wrapper {
+  @include wrapper;
+  &--full {
+    @include wrapper-full;
+  }
+}
+.grid-row {
+  @include row-flex;
+}
+
+
+
+.modal.in {
+  position: absolute;
+  background: #000000bd;
+  padding: $paddingSection*4;
+}
+
+.modal-body   {
+  & p,h1,h2,h3,h4,h5,h6,li,span {
+    color: #fff;
+  }
+}

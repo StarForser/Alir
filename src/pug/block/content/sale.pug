@@ -1,0 +1,20 @@
+section.sale
+  .grid-wrapper
+    .grid-row
+      .test
+      .swiper-container.swiper-latest--sale
+        .latest__controls.latest__controls--sale
+          h2.latest__head Акции
+          .latest__button.latest__button-prev.sale__button-prev
+            +svg("icon-arrow", "arrow")
+          .latest__button.latest__button-next.sale__button-next
+            +svg("icon-arrow", "arrow")
+        .swiper-wrapper
+          each item in products
+            .latest__item.swiper-slide
+              a(href="").latest__item-preview
+                img(src="images/latest/"+item.image, alt="")
+              .latest__item-descr
+                span.latest__item-name= item.name
+                span.latest__item-price= item.price
+                  +svg("icon-ruble", "ruble")

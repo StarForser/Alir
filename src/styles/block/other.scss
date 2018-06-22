@@ -1,0 +1,193 @@
+.logo {
+  @include col;
+  @include size(3);
+  @include size-xs(12);
+  @include display(row,$aitems:center);
+  text-decoration: none;
+  color: $colorFontB;
+  &--footer {
+    justify-content: stretch;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    .logo__text {
+      margin: 0 auto;
+
+    }
+    @include xs-block {
+      margin-bottom: $marginSection;
+    }
+  }
+  @include xs-block {
+    flex-direction: column;
+    .logo__text {
+      display: none;
+    }
+  }
+}
+
+.search {
+  @include col;
+  @include size(7);
+  @include size-xs(12);
+}
+
+
+
+
+.cart {
+  @include col;
+  @include size(2);
+  @include size-xs(12);
+  @include display(column,center);
+  background-color: #fff;
+  padding: 0 $paddingBlock;
+  position: relative;
+  padding-left: $paddingBlock*3;
+  @include xs-block {
+    margin-top: $marginSection;
+    border-top: 2px solid $colorAcent;
+    border-bottom: 2px solid $colorAcent;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: $paddingBlock 0;
+  }
+}
+
+.cart__wrapper-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate3d(-50%,-50%,0);
+  background-color: $colorAcent;
+  padding: $paddingBlock;
+  border-radius: 50%;
+  @include xs-block {
+    right: 0;
+    left: auto;
+    transform: translate3d(0%,-50%,0);
+  }
+}
+.cart__wrapper {
+  @include xs-block {
+    text-align: center;
+  }
+}
+
+.cart__text {
+  @include font("b");
+  font-weight: 400;
+  color: $colorFontB;
+  margin-bottom: $marginBlock/2;
+  @include xs-block {
+    text-align: center;
+    margin-right: $marginBlock;
+  }
+}
+.cart__price {
+  @include font;
+  color: $colorFontB;
+  @include xs-block {
+    text-align: center;
+  }
+}
+
+.cart__link {
+  @include font;
+  text-decoration: none;
+  color: $colorFontB;
+  @include xs-block {
+    text-align: center;
+    flex-basis: 100%;
+    padding: $paddingBlock 0;
+  }
+}
+
+
+
+.search {
+  @include display(row,center,center);
+  @include col;
+  @include size(5);
+  @include size-md(4);
+  &__form {
+    flex-grow: 1;
+    @include display(row,center,center);
+    padding: 2px $paddingBlock;
+    background-color: #ccc;
+    border: 1px solid darken(#ccc,10%);
+  }
+  &__input {
+    @include font;
+    flex-grow: 1;
+    box-sizing: border-box;
+    background-color: #ccc;
+    border: none;
+    color: $colorFontB;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.other-head {
+  margin: 0;
+  margin-bottom: $marginSection;
+  text-align: left;
+  color: $colorFontB;
+  border-bottom: 1px solid #ccc;
+  padding: $paddingBlock 0;
+  padding-top: 0;
+}
+
+.pagination {
+  @include col;
+  @include size(6);
+  @include size-xs(12);
+  @include display(row,flex-end);
+  @include xs-block {
+    justify-content: center;
+    padding-top: $paddingSection;
+  }
+  &__item {
+    padding: $paddingBlock;
+    @include xs-block {
+      padding: 0;
+    }
+  }
+  &__link {
+    color: $colorFontB;
+    @include font;
+    text-decoration: none;
+    font-size: rem(16px);
+    padding: $paddingBlock/2 $paddingBlock;
+    &--active {
+      box-shadow: 0 0 1px #ccc;
+    }
+  }
+}
+
+.other {
+  margin-top: $marginSection;
+}
+
+
+.blank {
+  margin-bottom: $marginSection;
+  flex-grow: 1;
+  &__page {
+    @include col;
+    @include size(12);
+
+  }
+}
+
+.panel-collapse {
+  -webkit-transition: .25s;
+  transition: .25s;
+  overflow: hidden;
+}
+
+

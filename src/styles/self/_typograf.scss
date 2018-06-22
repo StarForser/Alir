@@ -1,0 +1,88 @@
+h1, h2, h3, h4, h5, h6 {
+  @include font("b");
+  text-transform: uppercase;
+  color: $colorFontB;
+  text-align: center;
+}
+a {
+  @include font("l");
+  font-size: rem(18px);
+}
+h1 {
+font-size: rem(34px);
+  
+}
+h2 {
+font-size: rem(30px);
+    
+}
+h3 {
+font-size: rem(26px);
+  
+}
+h4 {
+font-size: rem(22px);
+  
+}
+h5 {
+font-size: rem(18px);
+  
+}
+h6 {
+font-size: rem(14px);
+  
+}
+b {
+  @include font("b");
+}
+p {
+  @include font;
+  font-size: rem(18px);
+  color: $colorFontB;
+}
+
+ul {
+  @include font;
+  color: $colorFontB;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  padding-left: $paddingBlock*2;
+}
+
+table {
+  border-collapse: collapse;
+}
+tr,td,th {
+  border: 1px solid $colorGray;
+  padding: $paddingBlock / 2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  @include resetBtn;
+}
+
+.typograph {
+  flex-grow: 1;
+}
+.typograph__page {
+  @include col;
+  @include size(12);
+
+  padding: $paddingBlock;
+  color: $colorFontB;
+  margin-bottom: $marginSection;
+  ul {
+    list-style: circle;
+    padding-left: $paddingBlock*2;
+    margin-bottom: $marginBlock;
+     ul {
+       margin-top: $marginBlock;
+     }
+  }
+}

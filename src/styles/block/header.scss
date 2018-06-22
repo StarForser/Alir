@@ -1,0 +1,140 @@
+.header {
+  &__wrap {
+    @include col;
+    @include size(2);
+    @include size-md(3);
+    @include size-xs(12);
+    @include display(row,flex-end,center);
+    @include xs-block {
+      margin-top: $marginSection;
+      justify-content: center;
+    }
+  }
+  &__link {
+    @include font;
+    color: $colorFontB;
+    text-decoration: none;
+    margin-right: $marginBlock;
+    @include xs-block {
+      
+    }
+  }
+  &__top {
+    background-color: #494b56;
+    margin-bottom: $marginSection;
+    &-wrap {
+      @include col;
+      @include size(12);
+      @include display(row,$aitems:center);
+      flex-wrap: wrap;
+      padding: $paddingBlock 0;
+    }
+    &-link {
+      text-decoration: none;
+      color: $colorFontW;
+      @include display(row,$aitems:center);
+      margin-right: $marginBlock;
+      &-text {
+        margin-left: $marginBlock;
+      }
+      &--stretch {
+        margin-right: auto;
+      }
+    }
+    &-btn {
+      background-color: #fff;
+      @include font;
+      color: $colorFontB;
+      font-size: 18px;
+      padding: $paddingBlock/2 $paddingBlock*2;
+    }
+  }
+}
+
+.headder__midlle {
+  @include col;
+  @include size(12);
+  margin-bottom: $marginSection;
+}
+
+.header__menu {
+  @include col;
+  @include size(12);
+  //margin-bottom: $marginBlock;
+  z-index: 2;
+  &-block {
+    @include display();
+    @include xs-block {
+      position: absolute;
+      display: none;
+      left: 0;
+      right: 0;
+      z-index: 11;
+      transform-origin: 0 0;
+      background-color: #eeeeee;
+      &--mobile {
+        @include animation(snowMobileMenu, 0.25s, true, column, flex-start, stretch);
+      }
+      &--hide {
+        @include animation(hideMobileMenu, 0.25s, false);
+      }
+    }
+  }
+  &-item {
+    padding: $paddingBlock $paddingBlock*2;
+    padding-left: 0;
+    position: relative;
+    &:hover > .header__menu-innerblock {
+      @include display(column);
+      @include xs-block {
+        display: none;
+      }
+    }
+  }
+  &-link {
+
+    text-decoration: none;
+    padding-left: 0;
+    color: $colorFontB;
+    @include font("b");
+
+  }
+  &-innerblock {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    background-color: #fff;
+    left: 0;
+    right: 0;
+    min-width: 200px;
+    top: 100%;
+    border-top: 4px solid $colorAcent;
+    @include xs-block {
+      display: none;
+    }
+  }
+  &-inneritem {
+    display: block;
+  }
+  &-innerlink {
+    display: block;
+    padding: $paddingBlock;
+    text-decoration: none;
+    @include font;
+    color: $colorFontB;
+    &:hover {
+      color: lighten($colorFontB,40%);
+    }
+
+  }
+  @include xs-block {
+    position: relative;
+  }
+}
+
+.hamburger {
+  display: none;
+  @include xs-block {
+    display: inline-block;
+  }
+}

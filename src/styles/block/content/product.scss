@@ -1,0 +1,112 @@
+.product {
+  flex-grow: 1;
+  padding: $paddingSection 0;
+  &__preview {
+    @include col;
+    @include size(6);
+    @include size-xs(12);
+    @include display(row);
+    align-self: flex-start;
+    &-full {
+      flex-grow: 1;
+      display: block;
+      height: 450px;
+      padding: $paddingBlock 0;
+      @include xs-block {
+        text-align: center;
+      }
+      &:focus {
+        outline: none;
+      }
+      img {
+        max-height: 100%;
+      }
+    }
+    &-thumb {
+      @include display(column,$aitems:center);
+      flex-grow: 1;
+    }
+    &-thumbitem {
+      @include display(row);
+      flex-grow: 1;
+    }
+    &-thumblink {
+      height: 150px;
+      padding: $paddingBlock;
+      box-sizing: border-box;
+      &:focus {
+        outline: none;
+      }
+      img {
+        max-height: 100%;
+      }
+    }
+  }
+}
+
+
+.product__decription {
+  @include col;
+  @include size(6);
+  @include display(column);
+  @include size-xs(12);
+  &-head {
+    color: $colorFontB;
+    margin: 0;
+    text-align: left;
+    text-transform: none;
+    @include xs-block {
+      text-align: center;
+    }
+  }
+  &-subhead {
+    @include font;
+    margin-bottom: $marginSection;
+    @include xs-block {
+      text-align: center;
+    }
+  }
+  &-wrap {
+    margin-bottom: $marginSection;
+  }
+  &-price {
+    @include font;
+    margin-right: $marginBlock;
+    
+    &--num {
+      @include font("b");
+    }
+  }
+  &-label {
+    margin-bottom: $marginSection;
+  }
+  &-text {
+    @include font;
+    color: $colorFontB;
+    margin-right: $marginBlock;
+  }
+  &-input {
+
+  }
+  &-button {
+    @include font;
+    align-self: flex-start;
+    background-color: $colorAcent;
+    padding: $paddingBlock $paddingSection;
+    color: $colorFontW;
+    margin-bottom: $marginSection;
+  }
+  &-fulltext {
+    color: $colorFontB;
+    @include font;
+  }
+}
+
+.product__options {
+  @include display;
+  flex-wrap: wrap;
+  margin-bottom: $marginSection;
+  &-head {
+    flex-basis: 100%;
+  }
+}

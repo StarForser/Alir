@@ -1,0 +1,20 @@
+.call-box.jsCallBlock
+  section.call-back
+    button.call-back__close.jsCallCloseBtn
+      +svg("icon-close", "remove")
+    h2.call-back__head Свяжитесь со мной
+    form#callBack.call-back__form
+      label.forma__label
+        input.forma__input(name='name', required='', type='text', placeholder='Имя')
+      label.forma__label
+        input.forma__input(name='email', type='text', placeholder='Email', required)
+      label.forma__label.forma__label-textarea
+        span.forma__comment-head Дополнительный комментарий(не обязательно)
+        textarea.forma__comment(name='enquiry', rows='5', value='')
+      .forma__comment-head.forma__comment-head--row Я прочитал и согласен с <a href="">условиями безопастности</a> и <a  href="">обработки персональных данных</a>
+        label.custom-checkbox.forma__comment-head--checkbox
+          input(type="checkbox" name="agree").custom-checkbox__input
+          span.custom-checkbox__element
+            +svg("icon-checkbox","check")
+      button.call-back__btn-submit(type='submit')
+        span Отправить запрос

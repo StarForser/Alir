@@ -1,0 +1,16 @@
+ul.pagination
+  li.pagination__item.pagination__item--arrow.pagination__item--back.pagination__item--deactive
+    span(href="").pagination__link-arrow.pagination__link-arrow--active
+      +svg('icon-pagination','arrow')
+  li.pagination__item
+    span.pagination__link.pagination__link--active
+      span.pagination__link-text 1
+  li.pagination__item
+    a.pagination__link(href="")
+      span.pagination__link-text 2
+  li.pagination__item
+    a.pagination__link(href="")
+      span.pagination__link-text 3
+  li.pagination__item.pagination__item--arrow
+    a(href="").pagination__link-arrow
+      +svg('icon-pagination icon-pagination--right','arrow')

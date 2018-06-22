@@ -1,0 +1,62 @@
+.footer {
+  padding: $paddingSection 0;
+  background: $colorDop;
+  min-height: 300px;
+  &__maps {
+
+  }
+}
+
+.footer__contacts {
+  @include col;
+  @include size(3);
+  @include size-xs(12);
+  @include display(column);
+  @include xs-block {
+    margin-bottom: $marginSection;
+  }
+  &-item {
+    text-decoration: none;
+    color: $colorFontB;
+    @include font;
+    margin-bottom: $marginBlock;
+  }
+  &-text {
+    margin-left: $marginBlock;
+  }
+}
+.footer__menu {
+  @include col;
+  @include size(3);
+  @include size-xs(12);
+  @include xs-block {
+    margin-bottom: $marginSection;
+  }
+  &-block {
+
+  }
+  &-item {
+    margin-bottom: $marginBlock;
+  }
+  &-link {
+    @include font;
+    text-decoration: none;
+    color:$colorFontB;
+  }
+}
+.footer__maps {
+  @include col;
+  @include size(3);
+  @include size-xs(12);
+  @include xs-block {
+    min-height: 300px;
+  }
+  @include display(column,flex-start);
+  .other-head {
+    flex-grow: 0;
+  }
+  &-item {
+    flex-grow: 1;
+  }
+}
+

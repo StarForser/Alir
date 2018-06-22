@@ -1,0 +1,73 @@
+-
+  var products = [
+    {
+      name: "Имя",
+      price: "1000 руб.",
+      image: "images/latest/1.jpg"
+    },
+    {
+      name: "Имя",
+      price: "1300 руб.",
+      image: "images/latest/2.jpg"
+    },
+    {
+      name: "Имя",
+      price: "1500 руб.",
+      image: "images/latest/3.jpg"
+    },
+    {
+      name: "Имя",
+      price: "1090 руб.",
+      image: "images/latest/2.jpg"
+    },
+    {
+      name: "Имя",
+      price: "1000 руб.",
+      image: "images/latest/2.jpg"
+    },
+    {
+      name: "Имя",
+      price: "1300 руб.",
+      image: "images/latest/1.jpg"
+    },
+    {
+      name: "Имя",
+      price: "1500 руб.",
+      image: "images/latest/2.jpg"
+    },
+    {
+      name: "Имя",
+      price: "1090 руб.",
+      image: "images/latest/3.jpg"
+    },
+    {
+      name: "Имя",
+      price: "1000 руб.",
+      image: "images/latest/1.jpg"
+    },
+    {
+      name: "Имя",
+      price: "1300 руб.",
+      image: "images/latest/2.jpg"
+    },
+    {
+      name: "Имя",
+      price: "1500 руб.",
+      image: "images/latest/3.jpg"
+    },
+    {
+      name: "Имя",
+      price: "1090 руб.",
+      image: "images/latest/1.jpg"
+    },
+  ]
+
+section.products
+  .grid-wrapper
+    .grid-row
+      each product in products
+        .products__item
+          a(href="").products__preview
+            img(src=product.image, alt="")
+          span.products__name=product.name
+          span.products__price=product.price

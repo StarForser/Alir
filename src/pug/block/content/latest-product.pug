@@ -1,0 +1,87 @@
+-
+  var products = [
+    {
+      name: "Название модели",
+      price: "1200",
+      image: "1.jpg",
+    },
+    {
+      name: "Название модели",
+      price: "1200",
+      image: "2.jpg",
+    },
+    {
+      name: "Название модели",
+      price: "1200",
+      image: "3.jpg",
+    },
+    {
+      name: "Название модели",
+      price: "1200",
+      image: "1.jpg",
+    },
+    {
+      name: "Название модели",
+      price: "1200",
+      image: "2.jpg",
+    },
+    {
+      name: "Название модели",
+      price: "1200",
+      image: "3.jpg",
+    },
+    {
+      name: "Название модели",
+      price: "1200",
+      image: "1.jpg",
+    },
+    {
+      name: "Название модели",
+      price: "1200",
+      image: "2.jpg",
+    },
+    {
+      name: "Название модели",
+      price: "1200",
+      image: "3.jpg",
+    },
+    {
+      name: "Название модели",
+      price: "1200",
+      image: "1.jpg",
+    },
+    {
+      name: "Название модели",
+      price: "1200",
+      image: "2.jpg",
+    },
+    {
+      name: "Название модели",
+      price: "1200",
+      image: "3.jpg",
+    },
+  ]
+
+
+section.latest
+  .grid-wrapper
+    .grid-row
+      .latest__controls
+        h2.latest__head Новые продукты
+        .latest__button.latest__button-prev.last__button-prev
+          +svg("icon-arrow", "arrow")
+        .latest__button.latest__button-next.last__button-next
+          +svg("icon-arrow", "arrow")
+      .swiper-container.swiper-latest
+        .swiper-wrapper
+          each item in products
+            .latest__item.swiper-slide
+              a(href="").latest__item-preview
+                img(src="images/latest/"+item.image, alt="")
+              .latest__item-descr
+                span.latest__item-name= item.name
+                span.latest__item-price= item.price
+                  +svg("icon-ruble", "ruble")
+                
+
+

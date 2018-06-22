@@ -1,0 +1,70 @@
+.latest {
+  margin-bottom: $marginSection;
+}
+
+.latest__controls {
+  @include col;
+  @include size(12);
+  @include display(row);
+  &--sale {
+    margin: 0;
+    width: auto;
+  }
+
+}
+.latest__item {
+  @include display(column);
+  &-descr {
+    @include display(column);
+    margin-top: auto;
+  }
+  &-name {
+    @include font("l");
+    font-size: 18px;
+    margin-bottom: $marginBlock/2;
+  }
+  &-price {
+    @include font("b");
+    font-size: 18px;
+  }
+}
+
+.swiper-latest {
+  @include col;
+  @include size(12);
+  &--sale {
+    @include size(8);
+    @include size-xs(12);
+  }
+}
+
+.latest__item-preview {
+  img {
+    max-width: 100%;
+  }
+}
+.latest__head {
+  display: inline-block;
+  color: $colorFontB;
+  vertical-align: middle;
+  margin: $marginSection 0;
+  margin-right: auto;
+
+}
+.latest__button {
+  background-color: $colorAcent;
+  display: block;
+  align-self: center;
+  padding: $paddingBlock/2;
+  &:focus {
+    outline: none;
+  }
+  &-prev {
+    transform: rotate3d(0,0,1,180deg);
+    margin-right: $marginBlock;
+  }
+  &-next {
+    
+  }
+}
+

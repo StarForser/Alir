@@ -1,0 +1,66 @@
+section.cart-page
+  .grid-wrapper
+    .grid-row.grid-row--center
+      h1.cart-page__head Корзина
+      section.cart-page__notice
+        ul.cart-page__notice-block
+          li.cart-page__notice-item
+            +svg("icon-notice icon-notice--red","alert")
+            span.cart-page__notice-text Товары отмеченные *** отсутствуют в нужном количестве или их нет на складе!
+            button.cart-page__button-close
+              +svg("icon-cancel","cancel")
+          li.cart-page__notice-item
+            +svg("icon-notice icon-notice--green","checked")
+            span.cart-page__notice-text Корзина обновлена
+            button.cart-page__button-close
+              +svg("icon-cancel","cancel")            
+          li.cart-page__notice-item
+            +svg("icon-notice icon-notice--red","error")
+            span.cart-page__notice-text Корзина обновлена
+            button.cart-page__button-close
+              +svg("icon-cancel","cancel")
+      ul.cart-page__list
+        li.cart-page__list-item
+          a.cart-page__preview(href="")
+            img(src="images/latest/1.jpg", alt="")
+          .cart-page__description
+            span.cart-page__description-art 2000000880068
+            a(href="").cart-page__description-name Золотое кольцо с сапфиром и бриллиантами
+            span.cart-page__option Размер:46
+          .cart-page__price
+            span.cart-page__item-price 14560
+            +svg("icon-price","ruble")
+          .cart-page__count
+            label.cart-page__count-label
+              button.cart-page__button
+                +svg("icon-cart-page","refresh")
+              input(type="text" value="1").cart-page__count-input
+              button.cart-page__button
+                +svg("icon-cart-page","remove")
+        li.cart-page__list-item
+          a.cart-page__preview(href="")
+            img(src="images/latest/2.jpg", alt="")
+          .cart-page__description
+            span.cart-page__description-art 203100000880068
+            a(href="").cart-page__description-name  с сапфиром и бриллиантами
+          .cart-page__price
+            span.cart-page__item-price 321
+            +svg("icon-price","ruble")
+          .cart-page__count
+            label.cart-page__count-label
+              button.cart-page__button
+                +svg("icon-cart-page","refresh")
+              input(type="text" value="1").cart-page__count-input
+              button.cart-page__button
+                +svg("icon-cart-page","remove")
+      .cart-page__total
+        span.cart-page__total-name Итого товаров на сумму:
+        .cart-page__price.cart-page__price--total
+          span.cart-page__total-price 20500
+          +svg("icon-price","ruble")
+      .cart-page__links
+        a(href="").cart-page__link
+          span.product-page__links-text Продолжить покупки
+        a(href="").cart-page__link
+          span.product-page__buttons-text Оформить заказ
+          +svg('icon-buy','cart')

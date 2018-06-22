@@ -1,0 +1,24 @@
+.slider {
+  margin-bottom: $marginSection;
+  @include xs-block {
+    display: none;
+  }
+}
+.swiper-pagination .swiper-pagination-progressbar-fill {
+  background-color: $colorAcent;
+}
+
+.swiper-container {
+
+}
+
+.swiper-slide {
+  @include display(row,center);
+  &-active {
+    @include display(row,center);
+  }
+  img {
+    max-width: none;
+  }
+}
+

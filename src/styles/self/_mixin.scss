@@ -1,0 +1,100 @@
+@function rem($px) {
+	@return $px / 16px + 0rem;
+}
+
+@mixin display($fdirect:row,$jcontent:stretch,$aitems:stretch) {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: $fdirect;
+  justify-content: $jcontent;
+  align-items: $aitems;
+}
+
+@mixin font($font:"n") {
+  @if $font == "b"{
+    font-family: $ffBold;
+    font-weight: $fwBold;
+  }
+  @else if $font == "l"{
+    font-family: $ffLight;
+    font-weight: $fwLight;
+  }
+  @else {
+    font-family: $ffNormal;
+    font-weight: $fwNormal;
+  }
+}
+@mixin resetBtn {
+  border: 0;
+  background: gray;
+  outline: none;
+  &:hover {
+    outline: none;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin addImg ($name,$size:cover,$positionY:center,$positionZ:center, $repeat:no-repeat) {
+  background-image: url('../images/' + $name);
+  background-size: $size;
+  background-position: $positionY $positionZ;
+  background-repeat: $repeat;
+}
+
+@mixin animation ($nameAnim, $timeAnim: 0.5s, $flag:true, $axis:row, $posX:center, $posY: center) {
+    @if $flag {
+      @include display($axis,$posX,$posY);
+    }
+    animation: $nameAnim $timeAnim;
+    animation-fill-mode: forwards;
+}
+
+@mixin linear ($height,$color) {
+    &::after {
+    content: "";
+    display: block;
+    height: $height;
+    flex-grow: 1;
+    background-color: $color;
+    margin-left: 5px;
+  }
+  &::before {
+    content: "";
+    display: block;
+    height: $height;
+    flex-grow: 1;
+    background-color: $color;
+    margin-right: 5px;
+  }
+}
+
+@mixin bgAbsolute ($color,$opacity) {
+  position: relative;
+    &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color, $opacity);
+    transition: 0.25s;
+  }
+}
+
+@mixin oneLinear ($color, $height) {
+  @include display(row,$aitems:center);
+  &:after {
+    content: "";
+    display: block;
+    height: $height;
+    flex-grow: 1;
+    background-color: $color;
+    margin-left: 10px;
+  }
+}

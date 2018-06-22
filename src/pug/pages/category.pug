@@ -1,0 +1,11 @@
+extends ../layout.pug
+
+block contents
+  include ../block/header/header.pug
+  section.other
+    .grid-wrapper
+      .grid-row
+        include ../block/other/filter.pug
+        include ../block/other/pagination.pug
+  include ../block/content/products.pug
+  include ../block/footer/footer.pug

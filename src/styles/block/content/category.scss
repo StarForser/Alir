@@ -1,0 +1,42 @@
+.category {
+  margin-bottom: $marginSection;
+  &__item {
+    @include col;
+    @include size(4);
+    @include size-xs(12);
+    @include xs-block {
+      margin-bottom: $marginBlock;
+    }
+    @include display(row);
+    min-height: rem(200px);
+    @include addImg("category/1.jpg");
+    padding: $paddingBlock;
+    &-link {
+      flex-basis: 40%;
+      text-decoration: none;
+      display: block;
+    }
+    &-head {
+      text-align: left;
+      color: $colorFontB;
+    }
+    &-subhead {
+      text-align: left;
+      color: $colorFontB;
+    }
+    &--summer {
+      .category__item-head {
+        color: $colorFontW;
+      }
+      .category__item-subhead {
+        color: $colorFontW;
+      }
+    }
+    &--winter {
+      @include addImg("category/2.jpg");
+    }
+    &--autumn {
+      @include addImg("category/3.jpg");
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.products {
+  padding: $paddingSection 0;
+  flex-grow: 1;
+  &__item {
+    @include col;
+    @include size(3);
+    @include size-xs(12);
+    transition: 0.25s;
+    padding-bottom: $paddingBlock;
+    &:hover {
+      //border: 1px solid $colorAcent;
+      box-shadow: 0 0 1px $colorAcent;
+    }
+    margin-bottom: $marginSection;
+  }
+  &__preview {
+    display: block;
+    padding: $paddingBlock;
+    text-align: center;
+
+    img {
+      
+    }
+  }
+  &__name {
+    display: block;
+    text-align: center;
+    @include font;
+    font-size: 18px;
+    margin-bottom: $marginBlock;
+  }
+  &__price {
+    display: block;
+    text-align: center;
+    @include font("b");
+    font-size: 18px;
+  }
+}

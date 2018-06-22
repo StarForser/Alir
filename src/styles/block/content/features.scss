@@ -1,0 +1,61 @@
+.features {
+  margin-bottom: $marginSection;
+  &__item {
+    @include col;
+    @include size(6);
+    @include size-xs(12);
+    @include xs-block {
+      margin-bottom: $marginSection;
+    }
+    @include display(); 
+    border: 5px solid $colorAcent;
+    padding: $paddingSection $paddingBlock;
+    &--reverse {
+      border: 5px solid #ccc;
+    }
+  }
+  &__item-wrap {
+    @include display(row,$aitems:center);
+    &--border {
+      @include display(column,center);
+      padding-right: $paddingSection;
+      border-right: 1px solid #ccc;
+      margin-right: $marginSection;
+    }
+    &--grow {
+      flex-grow: 1;
+    }
+  }
+
+  &__item-descr {
+    flex-grow: 1;
+    &--row {
+      @include display(row);
+    }
+    
+  }
+  &__item-head {
+    color: $colorFontB;
+    text-transform: none;
+    margin: 0;
+    text-align: left;
+    font-size: rem(16px);
+  }
+  &__item-text {
+    @include font("b");
+    color: $colorFontB;
+    font-size: rem(44px);
+
+  }
+  &__item-head {
+    color: $colorFontB;
+    margin: 0;
+    text-align: left;
+  }
+  &__item-fulltext {
+    @include font;
+    flex-basis: 50%;
+    color: $colorFontB;
+
+  }
+}

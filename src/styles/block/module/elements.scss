@@ -1,0 +1,53 @@
+.custom-radio__input {
+  display: none;
+  &:checked + .custom-radio__element > .icon-radio {
+    display: block;
+  }
+}
+
+.custom-radio__element {
+  flex-direction: row;
+  box-shadow: 0 0 3px #acacac inset;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+}
+
+.custom-radio {
+  flex-basis: auto;
+  @include display(row,$aitems:center);
+  
+}
+
+.custom-radio__label {
+  margin-left: 5px;
+}
+
+
+.custom-checkbox__input {
+  display: none;
+  &:checked + .custom-checkbox__element > .icon-checkbox {
+    display: block;
+  }
+}
+
+.custom-checkbox__element {
+  flex-direction: row;
+  box-shadow: 0 0 2px #000 inset;
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  padding: 5px;
+}
+
+.custom-checkbox {
+  flex-basis: auto;
+  @include display(row,$aitems:center);
+  
+}
+
+.custom-checkbox__label {
+  margin-left: 5px;
+}

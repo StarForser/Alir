@@ -1,0 +1,135 @@
+.icon {
+  width: 30px;
+  height: 30px;
+  &-logo {
+    fill: $colorAcent;
+    height: 50px;
+    width: auto;
+    @include md-block {
+      height: 30px;
+    }
+    @include xs-block {
+      height: auto;
+    }
+  }
+  &-search {
+    fill: $colorFontB;
+    padding: 2px;
+    width: 20px;
+    height: 20px;
+  }
+  &-bruble {
+    width: 30px;
+    height: 30px;
+  }
+  &-pagination {
+    width: 10px;
+    height: 10px;
+    transform: rotate3d(0,0,1,180deg);
+    &--right {
+      transform: rotate3d(0,0,1,0deg)
+    }
+  }
+  &-home {
+    width: 15px;
+    height: 15px;
+    fill: $colorFontB;
+  }
+  &-notice {
+    &--green {
+      fill: rgba(#4cdc4c,0.6);
+    }
+    &--red {
+      fill: rgb(194, 13, 13);
+    }
+  }
+
+  &-cancel {
+    fill: rgb(194, 13, 13);
+    width: 10px;
+    height: 10px;
+    vertical-align: top;
+  }
+}
+
+.icon-arrow {
+  fill: #fff;
+  vertical-align: middle;
+}
+
+.icon-contact {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+.icon-cart-header {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+.icon-ruble {
+  width: 15px;
+  height: 15px;
+  fill: $colorFontB;
+}
+
+.icon-features {
+  width: 70px;
+  height: 70px;
+  fill: $colorAcent;
+  flex-grow: 1;
+  align-self: center;
+}
+
+.icon-contacts {
+  width: 20px;
+  height: 20px;
+}
+
+
+.icon-cart {
+  width: 20px;
+  height: 20px;
+  fill: $colorAcent;
+}
+
+
+.icon-close {
+  fill: #fff;
+}
+
+.icon-radio {
+  width: 100%;
+  height: 100%;
+  fill: $colorAcent;
+  display: none; 
+}
+.icon-checkbox {
+  width: 100%;
+  height: 100%;
+  fill: $colorAcent;
+  display: none; 
+}
+
+
+.icon-alert {
+  fill: $colorAcent;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-price {
+  width: 20px;
+  height: 20px;
+  fill: #333;
+}
+
+
+.icon-buy {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  margin-left: $marginBlock;
+}
