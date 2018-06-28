@@ -1,0 +1,40 @@
+.order__checkout {
+  flex-basis: 50%;
+  @include display(column,flex-start);
+  margin-bottom: $marginSection;
+
+}
+
+.order__button {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.order__checkout-label {
+  margin-bottom: $marginBlock;
+}
+
+.order__label-name {
+  @include font();
+  font-size: 16px;
+}
+
+.panel-default, .panel-collapse {
+  @include col();
+  @include size(12);
+}
+.panel-default {
+  @include display(column);
+}
+.order__head {
+  @include col();
+  @include size(12);
+}
+
+.panel-title {
+
+}
+
+.order__wrapper {
+  @include display();
+}

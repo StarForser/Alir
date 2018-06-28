@@ -61,10 +61,27 @@
     padding-right: $paddingSection;
     box-sizing: border-box;
     margin-bottom: $marginSection;
+    &:nth-child(2n) {
+      margin-left: $marginSection*2;
+    }
+    @include xs-block {
+      flex-basis: auto;
+      flex-grow: 1;
+      padding-right: 0;
+      &:nth-child(2n) {
+        margin-left: 0;
+      }
+    }
+    &--order {
+      flex-basis: auto;
+    }
+    &--order:nth-child(2n) {
+      margin-left: 0;
+    }
   }
-  &-label:nth-child(2n) {
-    margin-left: $marginSection*2;
-  }
+
+
+
   &-input {
     flex-grow: 1;
     background-color: #fff;
@@ -114,10 +131,15 @@
     font-size: 16px;
     color: #333;
   }
+
   @include font;
   font-size: 16px;
   margin-right: $marginSection;
   margin-left: $marginSection*2;
+  @include xs-block {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 
 .client__form--checkbox {
@@ -129,9 +151,12 @@
   background-color: $colorAcent;
   color: $colorFontW;
   @include font;
-  font-size: 18px;
+  font-size: rem(18px);
   min-width: 170px;
   border: none;
+  @include xs-block {
+    flex-grow: 1;
+  }
 }
 
 
@@ -147,4 +172,40 @@
       color: $colorAcent;
     }
   }
+}
+
+.account__addres {
+  
+
+  &-book {
+    @include display(row,center,center);
+    margin-bottom: $marginSection;
+  }
+  &-text {
+    @include font;
+    font-size: 18px;
+    margin-right: $marginSection;
+  }
+  &-button {
+    margin-right: $marginSection;
+    cursor: pointer;
+    &:hover {
+      .icon-addres {
+        fill: darken($colorAcent,20%);
+      }
+    }
+  }
+}
+
+
+.icon-addres {
+  fill: $colorAcent;
+}
+
+
+
+// Стили дефолтной разметки шаблона
+
+#payment-existing, #shipping-existing {
+  margin-bottom: $marginSection;
 }

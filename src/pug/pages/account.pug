@@ -18,28 +18,18 @@ block contents
               a(href="").account__list-link Адресная книга
             li.account__list-item
               a(href="").account__list-link Посмотреть закладки
-          h3.client__form-head.client__form-head--account 
-            span.client__form-header Ваш пароль
-          ul.account__list
             li.account__list-item
-              a(href="").account__list-link Изменить контактную информацию
-            li.account__list-item
-              a(href="").account__list-link Пароль
-            li.account__list-item
-              a(href="").account__list-link Адресная книга
-            li.account__list-item
-              a(href="").account__list-link Посмотреть закладки
-          h3.client__form-head.client__form-head--account 
-            span.client__form-header Ваш пароль
-          ul.account__list
-            li.account__list-item
-              a(href="").account__list-link Изменить контактную информацию
-            li.account__list-item
-              a(href="").account__list-link Пароль
-            li.account__list-item
-              a(href="").account__list-link Адресная книга
-            li.account__list-item
-              a(href="").account__list-link Посмотреть закладки
+          h2 Список адресов доставки
+          .account__addres-book
+            .account__addres-text Роман Фамилия<br>улица<br>Киров 1234567<br>Калужская область<br>Российская Федерация
+            a.account__addres-button(title="Редактировать") 
+              +svg("icon-addres", "edit")
+            a.account__addres-button(title="Удалить") 
+              +svg("icon-addres", "remove")
+          <div class="cart-page__links cart-page__links--stretch">
+            <a href="https://alirkirov.ru/my-account" class="cart-page__links-link">Назад</a>
+            <a href="https://alirkirov.ru/index.php?route=account/address/add" class="cart-page__links-link">Новый адрес</a>
+          </div>
   include ../block/footer/footer.pug
 
 

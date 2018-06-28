@@ -1,0 +1,28 @@
+section.order
+  .grid-wrapper
+    .grid-row
+      .order__checkout
+        h2 Новый покупатель
+        p Варианты оформления заказа
+        label.custom-radio.order__checkout-label
+          input(type="radio" name="radio").custom-radio__input
+          span.custom-radio__element
+            +svg("icon-radio","radio")
+          span.custom-radio__label.order__label-name Регистрация
+        label.custom-radio.order__checkout-label
+          input(type="radio" name="radio").custom-radio__input
+          span.custom-radio__element
+            +svg("icon-radio","radio")
+          span.custom-radio__label.order__label-name Оформить заказ без регистрации
+        p Создание учетной записи поможет делать покупки быстрее и удобнее, а так же получать скидки как постоянный покупатель.
+        input(type="submit" value="Продолжить" class="button order__button")
+      .order__checkout
+        h2 Зарегистрированный пользователь
+        p Я совершал здесь покупки ранее и регистрировался
+        label.client__form-label.client__form-label--order
+          span.client__form-name E-Mail
+          input.client__form-input(type="text")
+        label.client__form-label.client__form-label--order
+          span.client__form-name Пароль
+          input.client__form-input(type="text")
+        input(type="submit" value="Войти" class="button order__button")

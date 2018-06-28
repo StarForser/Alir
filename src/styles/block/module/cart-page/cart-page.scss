@@ -134,7 +134,26 @@
   @include size(9);
   @include size-xs(12);
   @include display(row,space-between,center);
+  @include xs-block {
+    flex-wrap: wrap;
+  }
   margin-bottom: $marginSection;
+  &--stretch {
+    @include size(12);
+  }
+  &-link {
+    background-color: $colorAcent;
+    color: #fff;
+    min-width: 150px;
+    text-align: center;
+    padding: 10px 5px;
+    text-decoration: none;
+    @include xs-block {
+      flex-grow: 1;
+      flex-basis: 100%;
+      margin-bottom: $marginSection;
+    }
+  }
 }
 
 .cart-page__link {

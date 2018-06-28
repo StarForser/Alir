@@ -18,7 +18,9 @@
 .custom-radio {
   flex-basis: auto;
   @include display(row,$aitems:center);
-  
+  @include xs-block {
+    justify-content: center;
+  }
 }
 
 .custom-radio__label {
