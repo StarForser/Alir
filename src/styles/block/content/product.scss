@@ -94,7 +94,7 @@
     background-color: $colorAcent;
     padding: $paddingBlock $paddingSection;
     color: $colorFontW;
-    margin-bottom: $marginSection;
+
   }
   &-fulltext {
     color: $colorFontB;
@@ -108,5 +108,19 @@
   margin-bottom: $marginSection;
   &-head {
     flex-basis: 100%;
+  }
+}
+
+.product__wishlist-button {
+  background-color: transparent;
+  &:hover {
+    & .icon {
+      fill: $colorAcent;
+    }
+  }
+  &--ok {
+    & .icon {
+      fill: $colorAcent;
+    }
   }
 }
