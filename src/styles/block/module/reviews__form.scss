@@ -1,0 +1,26 @@
+.client__form-label {
+
+}
+.reviews__form {
+  padding-left: $paddingSection;
+}
+.client__form-label--reviews {
+  padding: 0;
+  &:nth-child(2n) {
+    margin-left: 0;
+  }
+  textarea {
+    resize: none;
+  }
+}
+
+
+.reviews__rating-name {
+  margin-right: $marginSection;
+  @include font("");
+}
+.reviews__rating {
+  &:nth-child(2n) {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,36 @@
+
+form(action="").reviews__form
+  h3.reviews__form-head Оставьте отзыв
+  label.client__form-label.client__form-label--reviews
+    span.client__form-name Имя 
+    input.client__form-input(type="text")
+  label.client__form-label.client__form-label--reviews
+    span.client__form-name Текст комментария 
+    textarea(name="",rows="8").client__form-textarea
+  .client__form-wrap
+    h3.client__form-head 
+      span.client__form-header Оценка
+    span.reviews__rating-name Плохо
+    label.custom-radio.client__form-label.reviews__rating
+      input(type="radio" name="radio").custom-radio__input
+      span.custom-radio__element
+        +svg("icon-radio","radio")
+    label.custom-radio.client__form-label.reviews__rating
+      input(type="radio" name="radio").custom-radio__input
+      span.custom-radio__element
+        +svg("icon-radio","radio")
+    label.custom-radio.client__form-label.reviews__rating
+      input(type="radio" name="radio").custom-radio__input
+      span.custom-radio__element
+        +svg("icon-radio","radio")
+    label.custom-radio.client__form-label.reviews__rating
+      input(type="radio" name="radio").custom-radio__input
+      span.custom-radio__element
+        +svg("icon-radio","radio")
+    label.custom-radio.client__form-label.reviews__rating
+      input(type="radio" name="radio").custom-radio__input
+      span.custom-radio__element
+        +svg("icon-radio","radio")
+    span.reviews__rating-name Хорошо
+  input(type="submit" value="Продолжить" class="button")
+  

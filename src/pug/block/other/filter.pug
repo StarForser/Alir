@@ -1,3 +1,64 @@
-section.filter
-  
-      
+section.filter.filterJs
+  select(id="input-sort" class="form-control" onchange="location = this.value;")
+    option(selected="selected") По умолчанию
+    option Название (А - Я)
+    option(selected="selected") Название (Я - А)
+    option Цена (низкая высокая)
+    option Цена (высокая низкая)
+    option Рейтинг (начиная с высокого)
+    option Рейтинг (начиная с низкого)
+    option Модель (А - Я)
+    option Модель (Я - А)
+  select(name="")
+    option(value="" selected="selected") 12
+    option(value="") 13
+    option(value="") 14
+  .filter__wrapper
+    button.filter__open.filterJsOpen Материал
+      +svg("icon-filter","filter")
+    .filter__block
+      .filter__custom
+        .filter__custom-wrap
+          label.custom-checkbox.filter__custom-checkbox
+            input(type="checkbox" name="agree").custom-checkbox__input
+            span.custom-checkbox__element
+              +svg("icon-checkbox","check")
+            span.filter__custom-name Золото   
+          label.custom-checkbox.filter__custom-checkbox
+            input(type="checkbox" name="agree").custom-checkbox__input
+            span.custom-checkbox__element
+              +svg("icon-checkbox","check")
+            span.filter__custom-name Серебро   
+      button.filter__custom-button Применить
+  .filter__wrapper
+    button.filter__open.filterJsOpen Ткань
+      +svg("icon-filter","filter")
+    .filter__block
+      .filter__custom
+        .filter__custom-wrap
+          label.filter__custom-label.filter__custom-checkbox
+            input(type="checkbox" name="test").custom-checkbox__input
+            span.custom-checkbox__element
+              +svg("icon-checkbox","check")
+            span.filter__custom-name Велюр
+          label.filter__custom-label.filter__custom-checkbox
+            input(type="checkbox" name="test").custom-checkbox__input
+            span.custom-checkbox__element
+              +svg("icon-checkbox","check")
+            span.filter__custom-name Гипюр
+          label.filter__custom-label.filter__custom-checkbox
+            input(type="checkbox" name="test").custom-checkbox__input
+            span.custom-checkbox__element
+              +svg("icon-checkbox","check")
+            span.filter__custom-name Жаккард
+          label.filter__custom-label.filter__custom-checkbox
+            input(type="checkbox" name="test").custom-checkbox__input
+            span.custom-checkbox__element
+              +svg("icon-checkbox","check")
+            span.filter__custom-name Креп
+          label.filter__custom-label.filter__custom-checkbox
+            input(type="checkbox" name="test").custom-checkbox__input
+            span.custom-checkbox__element
+              +svg("icon-checkbox","check")
+            span.filter__custom-name Лен
+      button.filter__custom-button Применить

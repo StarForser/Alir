@@ -60,10 +60,23 @@
         }
         }
     });
-
+    formReady(callBack);
+    document.querySelector(".filterJs").addEventListener("click", openFilter)
   }
  
+  let openFilter = function openFilter (e) {
 
+    let block = e.target.closest(".filterJs");
+    let btn = e.target.closest(".filterJsOpen");
+    if (block) {
+        [].forEach.call(block.children, function(child){
+            if(child.querySelector(".filterJsOpen") != btn && !e.target.closest(".filter__block")) child.classList.remove("filter__wrapper--active");
+        })
+    }
+    if (btn) {
+        btn.parentElement.classList.toggle("filter__wrapper--active");
+    }
+  }
   function buildMap () {
       myMap = new ymaps.Map("map", {
           center: [58.61211307, 49.67741000],
@@ -93,7 +106,6 @@
         }
       }
       function clickBtn (e) {
-        e.preventDefault();
         btn.classList.toggle("is-active");
         if (menu.classList.contains(menu.classList[0]+"--mobile")) {
             menu.classList.add(menu.classList[0]+"--hide");
@@ -191,6 +203,7 @@ function animationListener (nameAnim) {
     }
 } 
 function formSend (forma) {
+    let elemError = "";
     return function (e) {
         e.preventDefault();
         var itemBlock = formGetBlock(forma);
@@ -198,8 +211,23 @@ function formSend (forma) {
         var formData = new FormData(forma);
         xhr.open("POST", "https://alirkirov.ru/index.php?route=information/contact");
         xhr.send(formData);
+
         xhr.onreadystatechange = function() {
-        if (xhr.readyState != 4) return;
+            if (xhr.readyState != 4 ) return;
+            if (JSON.parse(xhr.responseText)) {
+                let errorForm = JSON.parse(xhr.responseText);
+                for (key in errorForm) {
+                    if (errorForm[key]) {
+                        elemError = document.createElement("p");
+                        elemError.textContent = errorForm[key];
+                        forma.appendChild(elemError);
+                        return; 
+                    }
+                }
+            }
+            if(elemError) {
+                elemError.remove();
+            }
             forma.reset();
             itemBlock.button.classList.add(itemBlock.button.classList[0] + "--send");
             itemBlock.textBlock.textContent = "Запрос отправлен";

@@ -94,7 +94,6 @@
     background-color: $colorAcent;
     padding: $paddingBlock $paddingSection;
     color: $colorFontW;
-
   }
   &-fulltext {
     color: $colorFontB;
@@ -103,7 +102,7 @@
 }
 
 .product__options {
-  @include display;
+  @include display();
   flex-wrap: wrap;
   margin-bottom: $marginSection;
   &-head {

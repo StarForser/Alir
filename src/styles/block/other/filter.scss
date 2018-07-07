@@ -1,8 +1,122 @@
+
+
 .filter {
   @include col;
-  @include size(6);
-  @include size-xs(12);
-  @include display(row,$aitems:center);
+  @include size(12);
+  @include display;
   flex-wrap: wrap;
-  background: #fff;
+  & select {
+    margin-right: $marginSection;
+  }
+  &__wrapper {
+    @include display(row);
+    position: relative;
+    margin-right: $marginSection;
+    &--active {
+      & .filter__block {
+        display: block;
+      }
+    }
+  }
+  &__custom {
+    @include xs-block {
+      margin-right: 0;
+      margin-bottom: $marginSection;
+      
+    }
+  }
+  &__open {
+    @include display(row,stretch,center);
+    background-color: $colorAcent;
+    padding: $paddingBlock;
+    color: #fff;
+  }
+  &__block {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #fff;
+    z-index: 4;
+    border: 1px solid #c1c1c1;
+    padding: $paddingBlock 0;
+    min-width: 200px;
+    max-height: 250px;
+    overflow-x: auto;
+  }
+  @include xs-block {
+    flex-direction: column;
+  }
+}
+
+.filter__custom {
+  &-title {
+    @include font;
+    margin-bottom: $marginBlock;
+    display: block;
+    text-align: center;
+    background-color: $colorAcent;
+
+  }
+  &-wrap {
+    @include display(column);
+    padding: 0 $paddingBlock;
+    margin-bottom: $marginBlock;
+    border-bottom: 1px solid #c1c1c1;
+    padding-bottom: $paddingBlock;
+  }
+  &-label {
+    @include display(row);
+    vertical-align: middle;
+    margin-bottom: $marginBlock;
+
+  }
+  &-input {
+    display: none;
+    &:checked + .filter__custom-checkbox::before {
+      content: "";
+      display: block;	
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      left: 2px;
+      background: #413548;
+      border-radius: 2px;
+    }
+  }
+
+  &-name {
+    @include font;
+  }
+  &-button {
+    @include font;
+    display: block;
+    vertical-align: middle;
+    //padding: $paddingBlock/2 $paddingBlock;
+    background-color: $colorAcent;
+    color: $colorFontW;
+    margin: 0 auto;
+    padding: $paddingBlock/2 $paddingBlock;
+
+
+  }
+}
+
+.filter__custom-checkbox {
+  margin-bottom: $marginBlock;
+  & .custom-checkbox__element {
+    margin-right: $marginBlock;
+  }
+  & .custom-checkbox__element {
+    box-shadow: none;
+    border: 1px solid #c1c1c1;
+    padding: 3px;
+  }
+}
+
+.icon-filter {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  margin-left: $marginBlock;
 }
