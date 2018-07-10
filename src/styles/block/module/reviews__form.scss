@@ -3,6 +3,9 @@
 }
 .reviews__form {
   padding-left: $paddingSection;
+  @include xs-block {
+    padding-left: 0;
+  }
 }
 .client__form-label--reviews {
   padding: 0;

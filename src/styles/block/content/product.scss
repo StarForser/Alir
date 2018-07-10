@@ -94,6 +94,10 @@
     background-color: $colorAcent;
     padding: $paddingBlock $paddingSection;
     color: $colorFontW;
+    cursor: pointer;
+    &:hover {
+      background-color: darken($colorAcent,15%);
+    }
   }
   &-fulltext {
     color: $colorFontB;

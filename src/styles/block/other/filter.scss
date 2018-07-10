@@ -16,6 +16,9 @@
       & .filter__block {
         display: block;
       }
+      & .filter__open {
+        background-color: darken($colorAcent,15%);
+      }
     }
   }
   &__custom {
@@ -30,6 +33,10 @@
     background-color: $colorAcent;
     padding: $paddingBlock;
     color: #fff;
+    cursor: pointer;
+    &:hover {
+      background-color: darken($colorAcent,15%);
+    }
   }
   &__block {
     display: none;
@@ -58,7 +65,7 @@
 
   }
   &-wrap {
-    @include display(column);
+    @include display(column,stretch,flex-start);
     padding: 0 $paddingBlock;
     margin-bottom: $marginBlock;
     border-bottom: 1px solid #c1c1c1;
@@ -103,6 +110,7 @@
 }
 
 .filter__custom-checkbox {
+  cursor: pointer;
   margin-bottom: $marginBlock;
   & .custom-checkbox__element {
     margin-right: $marginBlock;
@@ -111,6 +119,9 @@
     box-shadow: none;
     border: 1px solid #c1c1c1;
     padding: 3px;
+  }
+  &:hover {
+    color: $colorAcent;
   }
 }
 

@@ -71,6 +71,8 @@
   }
 }
 .cart__wrapper {
+  @include display(row,$aitems:center);
+  margin-bottom: $marginBlock/2;
   @include xs-block {
     text-align: center;
   }
@@ -92,12 +94,21 @@
   @include xs-block {
     text-align: center;
   }
+  &--big {
+    text-transform: uppercase;
+    font-size: 22px;
+  }
 }
 
 .cart__link {
   @include font;
   text-decoration: none;
   color: $colorFontB;
+  font-size: 16px;
+  transition: 0.25s color;
+  &:hover {
+    color: $colorAcent;
+  }
   @include xs-block {
     text-align: center;
     flex-basis: 100%;
@@ -115,19 +126,31 @@
   &__form {
     flex-grow: 1;
     @include display(row,center,center);
-    padding: 2px $paddingBlock;
-    background-color: #ccc;
+    padding: 2px;
+    padding-left: $paddingBlock;
+    background-color: #fff;
     border: 1px solid darken(#ccc,10%);
   }
   &__input {
     @include font;
     flex-grow: 1;
     box-sizing: border-box;
-    background-color: #ccc;
+    background-color: #fff;
     border: none;
     color: $colorFontB;
     &:focus {
       outline: none;
+    }
+  }
+  &__button {
+    cursor: pointer;
+    padding: 2px;
+    background-color: #fff;
+    &:hover {
+      .icon {
+        fill: $colorAcent;
+        transition: 0.25s;
+      }
     }
   }
 }
