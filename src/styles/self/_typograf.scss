@@ -9,19 +9,19 @@ a {
   font-size: rem(18px);
 }
 h1 {
-font-size: rem(34px);
+font-size: rem(24px);
   
 }
 h2 {
-font-size: rem(30px);
+font-size: rem(22px);
     
 }
 h3 {
-font-size: rem(26px);
+font-size: rem(20px);
   
 }
 h4 {
-font-size: rem(22px);
+font-size: rem(20px);
   
 }
 h5 {
@@ -52,6 +52,7 @@ ul {
 
 table {
   border-collapse: collapse;
+  @include font;
 }
 tr,td,th {
   border: 1px solid $colorGray;

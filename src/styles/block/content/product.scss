@@ -51,7 +51,7 @@
   @include display(column);
   @include size-xs(12);
   &-head {
-    color: $colorFontB;
+    color: $colorAcent;
     margin: 0;
     text-align: left;
     text-transform: none;
@@ -62,9 +62,7 @@
   &-subhead {
     @include font;
     margin-bottom: $marginSection;
-    @include xs-block {
-      text-align: center;
-    }
+    text-align: center;
   }
   &-wrap {
     margin-bottom: $marginSection;

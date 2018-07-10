@@ -4,19 +4,33 @@
     @include col;
     @include size(12);
     @include display(row);
-
+    
   }
-  &__item {
-
+  &__item:first-child {
+    @include display(row,$aitems:center);
+  }
+  &__item:last-child {
+    & .breadcrumbs__link::after {
+      content: none;
+    }
   }
   &__link {
     @include font;
+    @include display(row,$aitems:center);
     color: $colorFontB;
     text-decoration: none;
     font-size: 18px;
-    margin-right: $marginBlock;
+    margin-right: 22px;
     &--active {
       color: lighten($colorFontB,40%); 
+    }
+    &::after {
+      content: "";
+      display: block;
+      background: url('../images/arrow.svg');
+      width: 10px;
+      height: 10px;
+      margin-left: 22px;
     }
   }
 }
