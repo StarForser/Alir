@@ -14,15 +14,18 @@
   padding: $paddingBlock/2;
   margin-right: $marginBlock;
   cursor: pointer;
+  &:hover {
+    color: $colorAcent;
+  }
 }
 /* Если реальный чекбокс у нас отмечен, то тогда добавляем данный признак и к нашему кастомному чекбоксу  */
 .checkbox:checked  {
-  & + .label {
+  & + span {
     color: $colorAcent;
   }
 
 }
 
-.checkbox[disabled] + .label {
+.checkbox[disabled] + span {
   color: lighten($colorFontB,40%);
 }

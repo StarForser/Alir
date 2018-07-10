@@ -39,7 +39,14 @@
 }
 
 .latest__item-preview {
+  overflow: hidden;
+  &:hover {
+    img {
+      transform: scale3d(1.1,1.1,1);
+    }
+  }
   img {
+    transition: 0.25s;
     max-width: 100%;
   }
 }
