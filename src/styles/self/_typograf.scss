@@ -92,3 +92,12 @@ option {
   @include font;
   font-size: 18px;
 }
+
+button {
+  @include font;
+  font-size: 18px;
+}
+select {
+  @include font;
+  font-size: 18px;
+}
