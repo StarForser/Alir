@@ -4,6 +4,8 @@
   @include col;
   @include size(12);
   @include display;
+  @include font;
+  font-size: 18px;
   flex-wrap: wrap;
   & select {
     margin-right: $marginSection;

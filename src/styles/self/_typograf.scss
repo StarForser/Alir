@@ -87,3 +87,8 @@ button {
      }
   }
 }
+
+option {
+  @include font;
+  font-size: 18px;
+}
