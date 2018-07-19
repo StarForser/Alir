@@ -63,6 +63,7 @@
   display: block;
   align-self: center;
   padding: $paddingBlock/2;
+  cursor: pointer;
   &:focus {
     outline: none;
   }
@@ -72,6 +73,9 @@
   }
   &-next {
     
+  }
+  &:hover {
+    background-color: darken($colorAcent,15%);
   }
 }
 

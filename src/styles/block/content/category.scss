@@ -15,6 +15,12 @@
       flex-basis: 40%;
       text-decoration: none;
       display: block;
+      &:hover {
+        .category__item-head, .category__item-subhead {
+          color: lighten($colorFontB, 15%);
+        }
+        
+      }
     }
     &-head {
       text-align: left;
@@ -25,12 +31,23 @@
       color: $colorFontB;
     }
     &--summer {
-      .category__item-head {
-        color: $colorFontW;
+      .category__item-link {
+        .category__item-head {
+          color: $colorFontW;
+        }
+        .category__item-subhead {
+          color: $colorFontW;
+        }
+        &:hover {
+          .category__item-head {
+            color: darken($colorFontW,15%);
+          }
+          .category__item-subhead {
+            color: darken($colorFontW,15%);
+          }
+        }
       }
-      .category__item-subhead {
-        color: $colorFontW;
-      }
+
     }
     &--winter {
       @include addImg("category/2.jpg");
